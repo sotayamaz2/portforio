@@ -1,0 +1,22 @@
+<h1>新しい履修情報を登録</h1>
+
+<%= form_with model: @course, local: true do |f| %>
+  <div>
+    <%= f.label :name, "コース名" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description, "コース概要" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :credits, "単位数" %>
+    <%= f.number_field :credits %>
+  </div>
+
+  <div>
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
